@@ -8,12 +8,41 @@
           Choose a new operation
         </h5>
         <div class="list-group">
-          <button type="button" class="list-group-item list-group-item-action">Addition</button>
-          <button type="button" class="list-group-item list-group-item-action">Subtraction</button>
-          <button type="button" class="list-group-item list-group-item-action">Multiplication</button>
-          <button type="button" class="list-group-item list-group-item-action">Division</button>
-          <button type="button" class="list-group-item list-group-item-action">Square Root</button>
-          <button type="button" class="list-group-item list-group-item-action">Random String</button>
+          <button type="button" class="list-group-item list-group-item-action"
+                  (click)="useOperation('addition')"
+                  [class.active]="selectedOperation==='addition'"
+                  [class.disabled]="selectedOperation!=='' && selectedOperation!=='addition'"
+          >Addition</button>
+
+          <button type="button" class="list-group-item list-group-item-action"
+                  (click)="useOperation('subtraction')"
+                  [class.active]="selectedOperation==='subtraction'"
+                  [class.disabled]="selectedOperation!=='' && selectedOperation!=='subtraction'"
+          >Subtraction</button>
+
+          <button type="button" class="list-group-item list-group-item-action"
+                  (click)="useOperation('multiplication')"
+                  [class.active]="selectedOperation==='multiplication'"
+                  [class.disabled]="selectedOperation!=='' && selectedOperation!=='multiplication'"
+          >Multiplication</button>
+
+          <button type="button" class="list-group-item list-group-item-action"
+                  (click)="useOperation('division')"
+                  [class.active]="selectedOperation==='division'"
+                  [class.disabled]="selectedOperation!=='' && selectedOperation!=='division'"
+          >Division</button>
+
+          <button type="button" class="list-group-item list-group-item-action"
+                  (click)="useOperation('squareRoot')"
+                  [class.active]="selectedOperation==='squareRoot'"
+                  [class.disabled]="selectedOperation!=='' && selectedOperation!=='squareRoot'"
+          >Square Root</button>
+
+          <button type="button" class="list-group-item list-group-item-action"
+                  (click)="useOperation('randomString')"
+                  [class.active]="selectedOperation==='randomString'"
+                  [class.disabled]="selectedOperation!=='' && selectedOperation!=='randomString'"
+          >Random String</button>
         </div>
       </div>
     </div>
