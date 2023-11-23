@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {RequestOperation} from "../../interfaces/requestOperation.interface";
 
 @Component({
   selector: 'app-apply-operation',
@@ -7,7 +8,14 @@ import {Component, Input} from '@angular/core';
 })
 export class ApplyOperationComponent {
 
+  @Output()
+  onSendOperation: EventEmitter<RequestOperation> = new EventEmitter();
+
   selectedOperation: string = '';
+  public request: RequestOperation = {
+    valueOne: 0,
+    valueTwo: 0,
+  }
 
   useCancel(value: boolean): void {
     this.selectedOperation = '';
@@ -20,5 +28,19 @@ export class ApplyOperationComponent {
       return;
     }
     this.selectedOperation = value;
+  }
+
+  sendOperation() {
+    console.log(this.request);
+    this.onSendOperation.emit(this.request);
+
+    //clean up
+    this.request = {valueOne:0, valueTwo: 0};
+  }
+
+  validateEnabled(): boolean {
+    return (this.selectedOperation == 'division' && this.request.valueTwo === 0) ||
+      (this.request.valueOne === null) ||
+      (this.request.valueTwo === null);
   }
 }

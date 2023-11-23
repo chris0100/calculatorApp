@@ -59,30 +59,37 @@
         <h5 class="card-title">
           Operate
         </h5>
-        <form class="row">
+        <form class="row" (ngSubmit)="sendOperation()">
           <div class="col-md-6">
             <input
-              type="text"
-              name="name"
+              type="number"
+              name="valueOne"
               class="form-control mb-2"
               placeholder=""
+              [(ngModel)]="request.valueOne"
             >
           </div>
 
           <div class="col-md-6">
             <input
-              type="text"
-              name="power"
+              type="number"
+              name="valueTwo"
               class="form-control mb-2"
               placeholder=""
+              [(ngModel)]="request.valueTwo"
             >
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-warning">
+            <button type="submit"
+                    class="btn btn-warning"
+                    [class.disabled]="validateEnabled()"
+            >
               Send
             </button>
 
-            <button class="btn btn-danger" (click)="useCancel(true)">
+            <button class="btn btn-danger"
+                    (click)="useCancel(true)"
+            >
               Cancel
             </button>
           </div>
@@ -91,10 +98,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-

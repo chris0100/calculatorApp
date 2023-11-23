@@ -9,7 +9,7 @@
           <div class="col-md-1"></div>
 
           <div class="col-md-10">
-            <app-apply-operation></app-apply-operation>
+            <app-apply-operation (onSendOperation)="onSendOperation($event)"></app-apply-operation>
           </div>
 
           <div class="col-md-1"></div>
@@ -17,10 +17,10 @@
 
         <div class="row m-3">
           <div class="col">
-            <app-list></app-list>
+            <app-list [recordList]="records"></app-list>
           </div>
-
         </div>
+
       </div>
     </div>
   </div>
