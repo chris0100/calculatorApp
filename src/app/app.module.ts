@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { ListComponent } from './components/list/list.component';
-import { AddOperationComponent } from './components/add-operation/add-operation.component';
-import { ChooseOperationComponent } from './components/choose-operation/choose-operation.component';
+import { ApplyOperationComponent } from './components/apply-operation/apply-operation.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 
@@ -14,8 +13,7 @@ import {FormsModule} from "@angular/forms";
     AppComponent,
     MainPageComponent,
     ListComponent,
-    AddOperationComponent,
-    ChooseOperationComponent
+    ApplyOperationComponent
   ],
   imports: [
     BrowserModule,
