@@ -1,30 +1,50 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+
+  <div class="container">
+    <a href="/home" class="navbar-brand p-3">CalculatorApp</a>
+
+    <div class="text-end" *ngIf="isLoggedIn">
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
 <hr>
 
-<div class="row">
-  <div class="col m-5">
-    <div class="card">
-      <div class="card-body">
+<div class="container">
+  <div class="row">
+    <div class="col m-5">
+      <div class="card">
+        <div class="card-body">
 
-        <div class="row">
-          <div class="col-md-1"></div>
+          <div class="row">
+            <div class="col-md-1"></div>
 
-          <div class="col-md-10">
-            <app-apply-operation (onSendOperation)="onSendOperation($event)"></app-apply-operation>
+            <div class="col-md-10">
+              <app-apply-operation (onSendOperation)="onSendOperation($event)"></app-apply-operation>
+            </div>
+
+            <div class="col-md-1"></div>
           </div>
 
-          <div class="col-md-1"></div>
-        </div>
-
-        <div class="row m-3">
-          <div class="col">
-            <app-list [recordList]="records"></app-list>
+          <div class="row m-3">
+            <div class="col">
+              <app-list [recordList]="records"></app-list>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 

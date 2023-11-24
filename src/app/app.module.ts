@@ -7,18 +7,26 @@ import { ListComponent } from './components/list/list.component';
 import { ApplyOperationComponent } from './components/apply-operation/apply-operation.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './components/login/login.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     ListComponent,
-    ApplyOperationComponent
+    ApplyOperationComponent,
+    LoginComponent,
+    NopagefoundComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
