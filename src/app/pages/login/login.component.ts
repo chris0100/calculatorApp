@@ -45,4 +45,13 @@ export class LoginComponent implements OnInit {
   }
 
 
+  //NOTA
+  ////////////////////////////////////////////////////////////////
+  //FRONTEND
+  //FALTA REALIZAR LA TABLA CON PAGINACION, LLAMADO A ELIMINAR RECORDS
+
+  //BACKEND
+  ////////////////////////////////////////////////////////////////
+  // FALTA IMPLEMENTAR ERRORES PARA MICROSERVICIO USERS
+
 }

@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate {
 
     if (this.storageService.isLoggedIn()) {
 
-      if (this.isTokenExpirado()) {
+      if (this.isTokenExpired()) {
         this.authService.logout();
         this.router.navigate(['/login']);
         return false;
@@ -34,7 +34,7 @@ export class AuthGuard implements CanActivate {
   }
 
 
-  isTokenExpirado(): boolean {
+  isTokenExpired(): boolean {
     const token = this.storageService.getUserToken();
     const objPayload = this.storageService.obtenerDatosToken(token);
     const now = new Date().getTime() / 1000;

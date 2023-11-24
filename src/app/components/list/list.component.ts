@@ -3,8 +3,7 @@ import {Record} from "../../interfaces/record.interface";
 
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  templateUrl: './list.component.html'
 })
 export class ListComponent {
 

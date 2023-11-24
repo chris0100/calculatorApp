@@ -3,8 +3,7 @@ import {RequestOperation} from "../../interfaces/requestOperation.interface";
 
 @Component({
   selector: 'app-apply-operation',
-  templateUrl: './apply-operation.component.html',
-  styleUrls: ['./apply-operation.component.css']
+  templateUrl: './apply-operation.component.html'
 })
 export class ApplyOperationComponent {
 

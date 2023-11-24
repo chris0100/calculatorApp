@@ -2,9 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {RequestOperation} from "../../interfaces/requestOperation.interface";
 import {CalculateService} from "../../services/calculate.service";
 import {Record} from "../../interfaces/record.interface";
-import {Subscription} from "rxjs";
 import {StorageService} from "../../services/storage.service";
-import {EventBusService} from "../../shared/event-bus.service";
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
 
@@ -46,7 +44,6 @@ export class MainPageComponent implements OnInit {
   }
 
   onSendOperation(request: RequestOperation) {
-    // call to the service
     this.calculateService.sendOperation(request);
   }
 }
